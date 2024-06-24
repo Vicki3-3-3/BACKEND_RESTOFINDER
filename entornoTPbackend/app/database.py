@@ -27,9 +27,10 @@ def close_db(e=None):
 # Si la conexión existe, cerrarla
 
 #ACA APARECIA QUE DB NO EXISTIA, POR LO QUE AGREGUE g.db, NO SE SI CORRESPONDE
-
-if g.db is not None:
-    g.db.close()
+#NO FUNCIONA SIN BASE DE DATOS
+db = ''
+if db is not None:
+    db.close()
 # Función para inicializar la aplicación con el manejo de la base de datos
 def init_app(app):
 # Registrar 'close_db' para que se ejecute al final del contexto de la aplicación
